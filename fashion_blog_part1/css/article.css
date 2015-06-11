@@ -1,0 +1,62 @@
+
+article {
+  postion: relative;
+  float: left;
+  padding: 40px;
+}
+
+article h3 {
+  color: rgb(209,209,209);
+  font-family: 'Lato';
+  font-size: 26px;
+  margin-left: 20px;
+}
+
+article h2 a {
+  color: rgb(232,232,232);
+  font-family: 'Lato';
+  font-size: 34px;
+  margin-left: 20px;
+}
+
+article img {
+  position: relative;
+  float: left;
+  height: 230px;
+  width: 687px;
+  margin-left: 50px;
+  padding: 20px;
+}
+
+article p {
+  position: relative;
+  float: left;
+  font-family: 'Lato';
+  font-size: 15px;
+  padding: 50px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+
+p::first-letter {
+  font-size: 83px;
+  color: rgb(221,221,221);
+  float: left;
+  padding-right: 10px
+}
+
+
+article h4 a {
+  text-decoration: none;
+  color: rgb(243,0,0);
+  font-size: 18px;
+  font-family: 'Lato';
+}
+
+article h4 {
+  text-align: right;
+  padding-right: 40px;
+
+}

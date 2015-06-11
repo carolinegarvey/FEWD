@@ -1,0 +1,51 @@
+body {
+	background: #E6E7E8;
+	font-size: 12px;
+	line-height: 16px;
+	color: #2798D5;
+}
+
+
+
+header {
+	color: #808284;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 26px;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #E6E7E8;
+}	
+
+.indextitle {
+	border-style: solid;
+	border-width: 40px;
+}
+
+.link {
+	clear: both;
+	display: block;
+	padding: 8px;
+	background: #BE1E2D;
+	text-align: center;
+	position: relative;
+	font-size: 30px;
+	font-family: 'Roboto';
+	text-decoration: none;
+}
+
+#globephoto {
+	width: 300px;
+	height: 300px;
+}
+
+
+
+
+section p {
+	clear: both;
+	position: relative;
+	float: right;
+	text-align: center;
+	font-family: 'Roboto';
+}

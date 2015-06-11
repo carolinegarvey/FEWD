@@ -1,0 +1,45 @@
+
+.firstrow {
+  margin-top: 46px;
+  margin-left: 37px;
+  padding: 20px;
+}
+
+header h1 {
+  position: relative;
+  float: left;
+
+}
+
+header h1 a {
+  color: rgb(243,0,0);
+  font-family: 'Lato';
+  font-size: 55px;
+  text-decoration: none;
+  font-weight: lighter;  
+}
+
+header h2 {
+  position: relative;
+  float: left;
+  color: rgb(232,232,232);
+  font-family: 'Lato';
+  font-size: 26px;
+  text-decoration: none;
+}
+
+header nav {
+  clear: both;
+  border:;
+}
+
+header nav a {
+
+  position: relative;
+  float: left;
+  top-margin: 30px;
+  color: rgb(232,232,232);
+  font-family: 'Lato';
+  font-size: 23px;
+  padding: 40px;
+}
