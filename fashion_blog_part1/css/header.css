@@ -1,45 +1,59 @@
 
-.firstrow {
-  margin-top: 46px;
-  margin-left: 37px;
-  padding: 20px;
+.container {
+  float: left;
+  height: 150px;
+  width:700px;
+  padding: 10px;
 }
 
-header h1 {
+header {
   position: relative;
   float: left;
-
 }
 
-header h1 a {
+header h1 a{
+  position: absolute;
+  width: 280px;
   color: rgb(243,0,0);
+  margin-top: 46px;
+  margin-left: 37px;
   font-family: 'Lato';
   font-size: 55px;
+  font-weight: lighter;
   text-decoration: none;
-  font-weight: lighter;  
+  
 }
 
 header h2 {
-  position: relative;
-  float: left;
+  position: absolute;
+  margin-top: 73px;
+  margin-left: 350px; 
   color: rgb(232,232,232);
   font-family: 'Lato';
   font-size: 26px;
   text-decoration: none;
 }
 
-header nav {
+.nav {
   clear: both;
-  border:;
+  position: absolute;
+  margin-left: 47px;
+  margin-top: 150px;
+  height: 67px;
+  width: 1200px;
 }
 
-header nav a {
-
-  position: relative;
-  float: left;
-  top-margin: 30px;
-  color: rgb(232,232,232);
+.nav a {
+  height: 67px;
+  width: 1000px;
+  text-decoration: none;
   font-family: 'Lato';
-  font-size: 23px;
-  padding: 40px;
-}
+  font-weight: lighter;
+  color: white;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  background-color: black;
+  }
+  

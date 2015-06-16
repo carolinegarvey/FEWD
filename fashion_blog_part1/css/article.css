@@ -1,62 +1,169 @@
 
-article {
-  postion: relative;
+.firstarticle {
+  clear: both;
   float: left;
-  padding: 40px;
+  margin-left: 47px;
+
 }
 
-article h3 {
+.firstarticle h3 {
+  position: absolute;
+  margin-top: 60px;
   color: rgb(209,209,209);
   font-family: 'Lato';
   font-size: 26px;
-  margin-left: 20px;
+  font-weight: lighter
+
 }
 
-article h2 a {
-  color: rgb(232,232,232);
+.firstarticle h2 a {
+  position: absolute;
+  margin-top: 100px;
+  color: black;
+  text-decoration: none;
   font-family: 'Lato';
   font-size: 34px;
-  margin-left: 20px;
+  font-weight: lighter;
+
 }
 
-article img {
-  position: relative;
-  float: left;
-  height: 230px;
-  width: 687px;
-  margin-left: 50px;
-  padding: 20px;
+.firstarticle img {
+  height: 242px;
+  width: 743px;
+  margin-top: 160px;
 }
 
-article p {
-  position: relative;
-  float: left;
+.firstarticle p {
+  position: absolute;
+  width: 743px;
+  margin-top: 50px;
   font-family: 'Lato';
   font-size: 15px;
-  padding: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   font-weight: lighter;
-  margin-left: 20px;
 }
 
 
-p::first-letter {
+.firstarticle p::first-letter {
+  text-align: top;
   font-size: 83px;
   color: rgb(221,221,221);
   float: left;
   padding-right: 10px
 }
 
-
-article h4 a {
-  text-decoration: none;
-  color: rgb(243,0,0);
-  font-size: 18px;
-  font-family: 'Lato';
+.firstarticle h4 {
+  margin-top: 300px;
+  width: 743px;
+  height: 60px;
+  border-bottom: solid  rgb(221,221,221);
+  border-width: 1px;
 }
 
-article h4 {
-  text-align: right;
-  padding-right: 40px;
+.firstarticle h4 a{
+  float: right;
+  right: 0px;
+  text-decoration: none;
+  color: red;
+  font-size: 18px;
+  font-family: 'Lato';
 
+}
+
+.secondarticle {
+  clear: both;
+  float: left;
+  margin-left: 47px;
+}
+
+.secondarticle h3 {
+  position: absolute;
+  margin-top: 10px;
+  color: rgb(209,209,209);
+  font-family: 'Lato';
+  font-size: 26px;
+  font-weight: lighter
+}
+
+.secondarticle h2 a {
+  position: absolute;
+  margin-top: 50px;
+  color: black;
+  text-decoration: none;
+  font-family: 'Lato';
+  font-size: 34px;
+  font-weight: lighter;
+}
+
+.secondarticle img {
+  height: 242px;
+  width: 743px;
+  margin-top: 110px;
+}
+
+.secondarticle p {
+  position: absolute;
+  width: 743px;
+  margin-top: 50px;
+  font-family: 'Lato';
+  font-size: 15px;
+  letter-spacing: 4px;
+  font-weight: lighter;
+}
+
+.secondarticle p::first-letter {
+  text-align: top;
+  font-size: 83px;
+  color: rgb(221,221,221);
+  float: left;
+  padding-right: 10px
+}
+
+.secondarticle h4 {
+  margin-top: 300px;
+  width: 743px;
+  height: 60px;
+  border-bottom: solid  rgb(221,221,221);
+  border-width: 1px;
+}
+
+.secondarticle h4 a{
+  float: right;
+  right: 0px;
+  text-decoration: none;
+  color: red;
+  font-size: 18px;
+  font-family: 'Lato';
+
+}
+
+.secondarticle .footernav {
+  clear: both;
+  position: absolute;
+  margin-left: 47px;
+  margin-top: 50px;
+  height: 67px;
+  width: 600px;
+}
+
+.secondarticle .footernav a {
+  height: 67px;
+  width: 600px;
+  text-decoration: none;
+  font-family: 'Lato';
+  padding: 3px;
+  color: red;
+  border-right: solid rgb(221,221,221);
+  border-width: 1px;
+}
+
+.secondarticle h5 {
+  clear: both;
+  position: absolute;
+  margin-left: 47px;
+  margin-top: 100px;
+  font-family: 'Lato';
+  font-size: 20px;
+  color: rgb(221,221,221);
+  padding-bottom: 20px;
 }
