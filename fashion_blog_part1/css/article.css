@@ -31,6 +31,18 @@ article {
 
 }
 
+.aboutus img {
+  margin-top: 450px;
+  margin-left: 100px;
+}
+
+.aboutus h4 a {
+  margin-left: 350px;
+  text-decoration: none;
+  color: red;
+  font-family: 'Lato';
+}
+
 .firstarticle{
   margin-left: 47px;
 }
