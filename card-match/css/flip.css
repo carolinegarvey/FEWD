@@ -1,0 +1,55 @@
+.card-container {
+	perspective: 1000;
+}
+
+.card-container:hover .card, .card-container.hover .card {
+	transform: rotateY(180deg);
+}
+
+.card-container, .front, .diamond, .heart, .club, .spade {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+
+.card {
+	clear: both;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position:relative;
+	display: block;
+}
+
+.front {
+	background-image: url('../img/bicycle-back.png');
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.diamond {
+	background-image: url('../img/french-suits.svg');
+}
+
+.heart {
+	background-image: url('../img/french-suits.svg');
+}
+
+.club {
+	background-image: url('../img/french-suits.svg');
+}
+
+.spade {
+	background-image: url('../img/french-suits.svg');
+}
+
+
+/* hide back of pane during swap */
+
+
+/* back, initially hidden pane */
+.diamond, .heart, .club, .spade  {
+	transform: rotateY(180deg);
+}

@@ -1,0 +1,50 @@
+{
+	"cards":[{
+				"suit" : "heart",
+		},
+		{
+			"suit" : "spade",
+		},
+		{
+			"suit" : "club",
+		},
+		{
+			"suit" : "diamond",
+		},
+		{
+			"suit" : "heart",
+		},
+		{
+			"suit" : "spade",
+		},
+		{
+			"suit" : "club",
+		},
+		{
+			"suit" : "diamond",
+		},
+		{
+			"suit" : "heart",
+		},
+		{
+			"suit" : "spade",
+		},
+		{
+			"suit" : "club",
+		},
+		{
+			"suit" : "diamond",
+		},
+		{
+			"suit" : "heart",
+		},
+		{
+			"suit" : "spade",
+		},
+		{
+			"suit" : "club",
+		},
+		{
+			"suit" : "diamond",
+		}]
+}

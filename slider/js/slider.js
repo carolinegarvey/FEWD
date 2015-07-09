@@ -10,8 +10,9 @@ Element.prototype.Slider = function(){
 
 	this.createButtons = function(){
 
-		leftButton.classlist.add('left');
+		/*leftButton.classlist.add('left');
 		rightButton.classlist.add('right');
+		*/
 
 		slider.appendChild(leftButton);
 		slider.appendChild(rightButton);

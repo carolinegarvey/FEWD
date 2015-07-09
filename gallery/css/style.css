@@ -13,10 +13,12 @@ Developer @GA in NYC
 /******************************************
 /* LAYOUT
 /*******************************************/
-
-@import 'comp/slider.css';
 @import 'comp/nav.css';
-
+@import 'comp/slider.css';
+@import 'comp/gallery.css';
+@import 'comp/single-photo.css';
+@import 'comp/search.css';
+@import 'comp/contact.css';
 
 /******************************************
 /* ADDITIONAL STYLES
