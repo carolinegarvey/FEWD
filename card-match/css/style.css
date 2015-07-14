@@ -7,6 +7,41 @@
 }
 
 body {
-	background-color: #044005;
+	background-color: ##044005;
 }
 
+#cardcontainer {
+	display: block;
+	margin: auto;
+	margin-top: 500px;
+	height: 1000px;
+	width: 2500px;
+	text-align: center;
+}
+
+.card {
+	background-image: url('../img/bicycle-back.png');
+	width: 315px;
+	height: 440px;
+	background-size: contain;
+	position: relative;
+	float: left;
+	display: inline-block;
+	margin: 100px;
+}
+
+.diamond {
+	background-image: url('../img/diamond.jpg');
+}
+
+.heart {
+	background-image: url('../img/heart.jpg');
+}
+
+.club {
+	background-image: url('../img/club.jpg');
+}
+
+.spade {
+	background-image: url('../img/spade.jpg');
+}

@@ -1,80 +1,90 @@
-var gridSize = {x: 6, y: 3};
-var cellSize = {x: 150, y: 200};
+var arrSuit = ['diamond', 'heart', 'club', 'spade'];
 
-this.init = function (){
-	for (var i=0; i < gridSize.x; i++){
-		for (var j=0; j< gridSize.y; j++){
-			this.createCard(i, j);
+var timeOpen = 700;
+var Timeout = 2000;
+var matches = 0;
+var timeClick = 0;
+var clickCard1 = 0;
+var clickCard2 = 0;
+var mousemove = 0;
+
+var ArrayShuffle = function(a) {
+	var d, c, b = a.length;
+
+	while (b){
+		c = Math.floor(Math.random() *b);
+		d = a[--b];
+		a[b] = a[c];
+	}
+	return a;
+}
+
+var startGame = function() {
+
+	ArrayShuffle(arrSuit);
+
+	for(i=0; i<16; i++) {
+		$('#cardcontainer').append('<div class="card ' + arrSuit[i] + '">' + '</div>');
+	}
+
+	setTimeout(function() {
+		$('.card').addClass('cardOut');
+		$('.layer').css('z-index', -1);
+	}, Timeout);
+}
+
+var gamePlay = function() {
+	$('.card').click(function(){
+		timeClick++;
+		$(this).removeClass('cardOut').delay(timeOpen).queue(function () {$(this).addClass('cardOut');$(this).dequeue();
+	});
+
+	$(this).mouseleave(function(){
+		mousemove++;
+	});
+		clickCard2 = $(this).attr('class');
+
+		if (clickCard1 === clickCard2&&mousemove>0) {
+			$('.'+clickCard2.substr(5)).animate({opacity:0}, 200);
+			mousemove = 0;
+			clickCard1 = 0;
+			matches = matches+1;
+		} else {
+			clickCard1 = clickCard2;
+			mousemove = 0;
 		}
 
-	}
-};
+		if (matches === 8) {
 
-this.createCard = function (i, j){
-	var x = (i - gridSize.x/2 + 0.5) * cellSize.x;
-	var y = (j - gridSize.y/2 + 0.5) * cellSize.y;
-	var sprite = new Sprite('images/bicycle-back.png');
-	var card = new SceneObject(sprite, 0, x, y);
-	this.addSceneObject(card);
-};
+			setTimeout(function(){$('.card').removeClass('cardOut');}, 1000);
+            setTimeout(function(){$('.card').animate({opacity:1}, 300).delay(500).animate({opacity:0});}, 1000);
+			setTimeout(function(){$('#cardcontainer').empty().append('<br><br><br><h1>You won!</h1><br><h2>Clicks = '+timeClick+'</h2>');}, 2000);
+            setTimeout(function(){$('#NewGame').css('z-index', 2);}, 4000);
+		}
 
+	});
 
+}
 
-
-var Card = function(card){
-	this.model = card;
-};
-
-var View = function(elem,parent,className) {
-	var self = this;
-	this.element = document.createElement(elem);
-	this.element.classList.add(className);
-	parent.appendChild(self.element);
-};
-
-
-View.prototype = {
-	setContent : function(content) {
-		this.element.innerHTML = content;
-	}
-
-};
-
-var Controller = function(){
-	this.model = [];
-};
+(document).ready(function() {
+	
+      $('#1').click(function(){Timeout = 1000;});
+      $('#2').click(function(){Timeout = 2000;});
+      $('#3').click(function(){Timeout = 3000;});
+      $('#NG').click(function(){
+          matches = 0;
+          timeClick = 0;
+          clickCard1 = 0;
+          clickCard2 = 0;
+          $('#cardcontainer').empty();
+          $('#NewGame').css('z-index', -2);
+		      startGame();
+          gamePlay();
+     });
+     
+});
 
 
-Controller.prototype = {
-	createView : function (){
-		this.model.forEach(function(card){
-			var v = new View('li',document.body,'card');
-			v.setContent('<h3>'+user.model.name+'</h3><h5>'+user.model.age+'</h5><h5>'+user.model.occupation+'</h5>');
-		});
 
 
-	},
-	fetchCards : function(){
-		var self = this;
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET','./model/users.json');
-		xhr.setRequestHeader('Content-Type','application/json');
-		xhr.onreadystatechange =  function(){
-			if (xhr.readyState === 4){
-				//parse our JSON
-				console.log(xhr.responseText);
-				var model = JSON.parse(xhr.responseText);
-				model.users.forEach(function(user){
-					self.model.push(new User(user));
-				});
-				self.createView();		
-			}
 
-		};
-		xhr.send(); 
-	}
-
-};
-
-var appController = new Controller();
-appController.fetchCards();

@@ -1,0 +1,88 @@
+.title {
+    font-size: 150px;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    font-weight: lighter;
+}
+
+body {
+    background-color: #044005;
+}
+
+
+#cardcontainer {
+    margin: 0 auto;
+    height:2240px;
+    width:3340px;
+    text-align:center;
+    
+}
+
+.card {
+    height: 653px;
+    width: 467px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 30px;
+    float:left;
+}
+
+.spade {
+    background-image: url('../img/spade.jpg');
+    border: 2px solid black;
+    border-radius: 5px;
+    float:left;
+}
+
+
+.club {
+    background-image: url('../img/club.jpg');
+    border: 2px solid black;
+    border-radius: 5px;
+    float:left;
+} 
+
+
+.diamond {
+    background-image: url('../img/diamond.jpg');
+    border: 2px solid black;
+    border-radius: 5px;
+    float:left;
+}
+
+.heart {
+    background-image: url('../img/heart.jpg');
+    border: 2px solid black;
+    border-radius: 5px;
+    float:left;
+}
+
+
+.layer {
+    float: left;
+    height:438px;
+    width:438px;
+    background-color: transparent;
+    position:absolute;
+    text-align:center;
+}
+
+#NewGame {
+    padding-left: 2500px;
+    margin: auto;
+    height:438px;
+    width:438px;
+    position:absolute;
+    text-align:center;
+}
+
+.cardOut {
+    height: 653px;
+    width: 467px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 30px;
+    float:left;
+    background: #ffffff url("../img/bicycle-back.png") no-repeat;
+}

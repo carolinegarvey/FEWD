@@ -1,31 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Wade Game Engine</title>
+    <title>Card Match</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background: #044005;   
+        }
 
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="wade_2.1.js"></script>
-
+        /*div#memory_board{
+            background: #044005;
+            border: #999 1px solid;
+            width: 1500px;
+            height: 1000px;
+            padding: 10px;
+            margin: 0px auto;
+        }*/
+        
+        div#memory_board > div{
+            /*background-image: url("bicycle-back2.jpg");*/
+            background-color: red;
+            border: #000 1px solid;
+            width: 315px;
+            height: 440px;
+            float: left;
+            margin: 10px;
+            padding: 20px;
+            font-size: 64px;
+            cursor: pointer;
+            text-align: center
+        }
+    </style>
     <script>
-        $(document).ready(function()
-        {
-            wade.init('memory.js');
-        });
+        var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F'];
+        var memory_values = [];
+        var memory_tiles_ids = [];
+        var tiles_flipped = 0;
+        Array.prototype.memory_tile_shuffle = function() {
+            var i = this.length, j, temp;
+            while(--i > 0){
+                j = Math.floor(Math.random() * (i+1));
+                temp = this[j];
+                this[j] = this[i];
+                this[i] = temp;
+            }
+        }
+        function newBoard(){
+            tiles_flipped = 0;
+            var output = '';
+            memory_array.memory_tile_shuffle();
+            for(var i = 0; i < memory_array.length; i++){
+                output += '<div id="tile_'+i+'" on click="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
+            }
+            document.getElementById('memory_board').innerHTML = output;
+        }
+        function memoryFlipTile(tile,val){
+            if(tile.innerHTML == "" && memory_values.length < 2){
+                tile.style.backgroundColor = '#FFF';
+                tile.innerHTML = val;
+                if(memory_values.length == 0){
+                    memory_values.click(val);
+                    memory_tile_ids.click(tile.id);
+                } else if (memory_values.length == 1){
+                    memory_values.push(val);
+                    memory_tile_ids.push(tile.id);
+                    if(memory_values[0] == memory_values[1]){
+                        tiles_flipped += 2;
+                        memory_values = [];
+                        memory_tile_ids = [];
+                        if (tiles_flipped == memory_array.length){
+                            alert("Board cleared... generating new board");
+                            document.getElementById('memory_board').innerHTML = "";
+                            newBoard();
+                        }
+                    } else {
+                        function flip2Back(){
+                            var tile_1 = document.getElementById(memory_tile_ids[0]);
+                            var tile_1 = document.getElementById(memory_tile_ids[1]);
+                            tile_1.style.backgroundColor = red;
+                            tile_1.innerHTML = "";
+                            tile_2.style.backgroundColor = red;
+                            tile_2.innerHTML = "";
+                            memory_values = [];
+                            memory_tile_ids = [];
+                        }
+                        setTimeout(flip2Back, 700);
+                    }
+                }
 
+            }
+        }
+        
     </script>
 </head>
 
 <body>
-
-<div id="container" style="border:0; width:800px; height:600px;">
-    <div id="wade_main_div" width="800" height="600" tabindex="1">
-    </div>
-</div>
-
+    <div id="memory_board"></div>
+    <script>newBoard();</script>
 </body>
 </html>
