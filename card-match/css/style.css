@@ -1,47 +1,50 @@
 .title {
-	font-size: 50px;
-	color: white;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	text-align: center;
-	font-weight: lighter;
+    font-size: 50px;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    font-weight: lighter;
 }
 
 body {
-	background-color: ##044005;
+    background-color: #044005;
 }
 
-#cardcontainer {
-	display: block;
-	margin: auto;
-	margin-top: 500px;
-	height: 1000px;
-	width: 2500px;
-	text-align: center;
+.flip-container {
+	perspective: 1000;
 }
 
-.card {
-	background-image: url('../img/bicycle-back.png');
-	width: 315px;
-	height: 440px;
-	background-size: contain;
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	height: 653px;
+    width: 467px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
 	position: relative;
-	float: left;
-	display: inline-block;
-	margin: 100px;
 }
 
-.diamond {
-	background-image: url('../img/diamond.jpg');
+/*hide back of pane during swap */
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.heart {
-	background-image: url('../img/heart.jpg');
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
 }
 
-.club {
-	background-image: url('../img/club.jpg');
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }
 
-.spade {
-	background-image: url('../img/spade.jpg');
-}

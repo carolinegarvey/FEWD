@@ -1,0 +1,31 @@
+/*#menu {
+	background-color:#1cb5ca;
+	padding: 50px;
+}*/
+
+#menu img { 
+    width: 100%; 
+    height: auto; 
+}
+
+#flowers img { 
+    width: 100%; 
+    height: auto; 
+}
+
+#spacer {
+	width: 100%;
+	height: 60px;
+	background-color: #1cb5ca; 
+}
+
+#spacer p {
+	color: white;
+	font-family: "proximanova", Helvetica,sans-serif;
+	font-size: 30px;
+	padding-top: 10px;
+	margin-left: 250px;
+}
+
+#supportdropdown
+

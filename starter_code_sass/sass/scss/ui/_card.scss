@@ -1,0 +1,8 @@
+.card {
+	@include card($white);
+
+}
+
+.card.blue {
+	@include card($white);
+}

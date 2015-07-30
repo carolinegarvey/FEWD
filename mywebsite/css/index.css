@@ -1,0 +1,62 @@
+h1 {
+	font-family: Lobster;
+	font-size: 250px;
+	color: #fc5844;
+	margin-top: 150px;
+	margin-left: 250px;
+	float: left;
+	width: 1200px;
+}
+
+img {
+	margin-top: 150px;
+	margin-left: 250px;
+	height: 2500px;
+	width: 2500px;
+	float: left;
+	
+}
+
+.links {
+	text-decoration: none;
+	font-size: 100px;
+	color: #7d7d7d;
+	font-family: Oxygen;
+	font-weight: bold;
+}
+
+#about {
+	position: absolute;
+	top: 900px;
+	left: 300px;
+}
+
+#digitalphotography {
+	position: absolute;
+	top: 1100px;
+	left: 300px;
+}
+
+#filmphotography {
+	position: absolute;
+	top: 1300px;
+	left: 300px;
+}
+
+#animations {
+	position: absolute;
+	top: 1500px;
+	left: 300px;
+}
+
+#design {
+	position: absolute;
+	top: 1700px;
+	left: 300px;
+}
+
+#personalprojects {
+	position: absolute;
+	top: 1900px;
+	left: 300px;
+}

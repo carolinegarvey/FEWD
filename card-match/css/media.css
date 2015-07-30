@@ -1,0 +1,11 @@
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+	body{
+		font-size: 14px;
+	}
+		.style ul li {
+		width: 100vw;
+		height: 100vw;
+	}
+
+
+}
